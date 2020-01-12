@@ -10,24 +10,24 @@ go run main.go
 
 ## directory structure
 ### commands
-- Batch files
+ Batch files
 ### configs
-- Common variables setting
+ Common variables setting
 ### controllers
-- Contains handler functions for particular route to be called when an api is called
+ Contains handler functions for particular route to be called when an api is called
 ### db
-- Contains migration files and db settings
+ Contains migration files and db settings
 ### middlewares
-- Middleware to be used for this project
+ Middleware to be used for this project
 ### models
-- Database tables to be used as model struct
+ Database tables to be used as model struct
 ### routes
-- Url routing when a request comes
+ Url routing when a request comes
 ### services
-- Contains all the core business logic including db connections
+ Contains all the core business logic including db connections
 ### tests
-- Testing files
+ Testing files
 ### .env
-- Environment variables setting
+ Environment variables setting
 ### main.go
-- Starting point
+ Starting point
