@@ -4,7 +4,6 @@ CREATE TABLE `reviews` (
   `user_id_to` bigint(20) unsigned NOT NULL,
   `rating` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `answer` json DEFAULT NULL,
   `agree_count` int(10) unsigned NOT NULL DEFAULT '0',
   `disagree_count` int(10) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(3) unsigned NOT NULL DEFAULT '0',
