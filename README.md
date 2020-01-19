@@ -113,7 +113,28 @@ user_id_from: unsignedInteger
 user_id_to: unsignedInteger  
 rating: unsignedTinyInteger  
 comments: text  
-like: boolean  
+agree_count: unsignedInteger
+disagree_count: unsignedInteger
 status: unsignedInteger  
 created_at: timestamp  
-updated_at: timestamp  
+updated_at: timestamp
+
+## migration
+### install go-magrate cli
+```
+brew install golang-migrate
+or
+go get -tags 'mysql' -u github.com/golang-migrate/migrate/cmd/migrate
+```
+### create migration file
+```
+migrate create -ext sql -dir db/migrations -seq create_users_table
+migrate create -ext sql -dir db/migrations -seq create_questions_table
+migrate create -ext sql -dir db/migrations -seq create_profiles_table
+migrate create -ext sql -dir db/migrations -seq create_reviews_table
+migrate create -ext sql -dir db/migrations -seq create_chat_room_configs_table
+```
+### run migration
+```
+migrate -path db/migrations -database 'mysql://root:babepass@tcp(127.0.0.1:3306)/babe' up 5
+```
