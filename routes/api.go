@@ -24,7 +24,7 @@ func SetupApiRouter() *mux.Router {
     apiRouter.HandleFunc("/reviews/{reviewId}/block", controllers.BlockReview).Methods("POST")
     apiRouter.HandleFunc("/chatRoomConfigs", controllers.ShowChatRoomConfigs).Methods("GET")
     apiRouter.HandleFunc("/chatRoomConfigs", controllers.StoreChatRoomConfigs).Methods("POST")
-    apiRouter.HandleFunc("/users/{userId}/chatRoomConfigs/block", controllers.BlockChatRoomConfig).Methods("POST")
+    apiRouter.HandleFunc("/chatRoomConfigs/{chatRoomConfigId}/block", controllers.BlockChatRoomConfig).Methods("POST")
 
     return apiRouter
 }
